@@ -39,3 +39,21 @@ Given the dataset people.csv, create a similarity measure between the people. Ta
 - Since Salary has a wide range, it requires some kind of treatment before use.
 - You are free about how to treat Gender.
 - Print the full name of the closest people in the dataset along with the measure you created.
+
+## 3. Machine Learning Classification
+Given the dataset people.csv, create a KNN model to predict if a person is married or not:
+- Nulls in any record invalidates that record.
+- What value of K you choose? Why?
+- Print a graph showing the best values of K related to the accuray.
+- Print the accuracy of the model.
+- Is the accuray satisfactory? Why?
+- What features do you think could be added to increase the accuracy? Please explain your thoughts.
+- Which features contributed the least to the model? Support your answer by showing concrete evidence in your notebook.
+
+## 4. Machine Learning Regression
+Given the dataset regression.csv, create a predictive model for the target variable **y** defined by: **y = count / max(count)**
+  import pandas as pd
+  df = pd.read_csv('regression.csv')
+  df["y"] = df["count"] / df["count"].max()
+
+a
