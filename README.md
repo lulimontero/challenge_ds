@@ -52,8 +52,15 @@ Given the dataset people.csv, create a KNN model to predict if a person is marri
 
 ## 4. Machine Learning Regression
 Given the dataset regression.csv, create a predictive model for the target variable **y** defined by: **y = count / max(count)**
-  import pandas as pd
-  df = pd.read_csv('regression.csv')
+  import pandas as pd ; 
+  df = pd.read_csv('regression.csv') ;
   df["y"] = df["count"] / df["count"].max()
+- To get an understanding of the periodic patterns of the data, have a look at the count variable per hour during a week.
+- Since the dataset is a time-ordered event log (hourly demand), use a time-sensitive cross-validation splitter to evaluate the model.
 
-a
+## 5. Outlier Detection
+A group of customers bought the lastest generation of a smartwatch released by a technology company. The smartwatch keeps track of user activities on a daily basis and the collected information is sent to cloud servers. For this excercise, you will explore a dataset of user behavior activites (ueba.csv) collected in February 2023.
+import pandas as pd ; 
+df = pd.read_csv('ueba.csv', parse_dates=['timestamp']) ;
+- Create visualizations to identify patterns in the data.
+- Try to apply an outlier detection estimator to find users that exhibit unusual behavior compared to the population.
